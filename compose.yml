@@ -9,3 +9,12 @@ services:
       - "8080:80"
     volumes:
       - ./src:/var/www/html
+
+  web:
+    container_name: "web"
+    build:
+      dockerfile: "./container/web/Dockerfile"
+    ports:
+      - "8081:80"
+    volumes:
+      - ./src:/var/www/html
